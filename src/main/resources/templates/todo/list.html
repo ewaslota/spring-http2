@@ -9,20 +9,22 @@
 </head>
 <body>
     <div class="container">
+        <a class="btn btn-primary" th:href="@{/todos/create}">Create</a>
         <table class="table">
             <thead>
             <tr>
                 <td>#</td>
+                <td>Zadanie</td>
                 <td>Status</td>
                 <td>Termin</td>
             </tr>
             </thead>
             <tbody>
                  <tr th:each="todo : ${todos}">
-                     <td     th:text="${todo.id}"></td>
-                     <td th:text="${todo.Zadanie}"></td>
-                     <td th:text="${todo.Status}"></td>
-                     <td th:text="${todo.Termin}"></td>
+                     <td th:text="${todo.id}"></td>
+                     <td th:text="${todo.zadanie}"></td>
+                     <td th:text="${todo.status}"></td>
+                     <td th:text="${todo.termin}"></td>
 
                  </tr>
             </tbody>
